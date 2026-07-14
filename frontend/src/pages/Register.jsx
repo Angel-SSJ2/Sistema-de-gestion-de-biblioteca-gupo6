@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { registerMock } from '/src/services/authService';
+import { registerMock } from '../services/authService.jsx';
 
 export default function Register() {
   const [name, setName] = useState('');

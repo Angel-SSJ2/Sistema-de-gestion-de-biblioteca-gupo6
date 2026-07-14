@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { loginMock } from '/src/services/authService';
+import { loginMock } from '../services/authService.jsx';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ export default function Login() {
       localStorage.setItem('token', data.token);
       setSuccess(`¡Bienvenido, ${data.user.name}! Redireccionando...`);
       setTimeout(() => {
-        navigate('/books'); // Redirecciona a la gestión de libros tras loguearse
+        navigate('/dashboard');
       }, 1500);
     } catch (err) {
       setError(err.message);
