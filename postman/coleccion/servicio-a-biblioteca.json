@@ -1,0 +1,428 @@
+{
+	"info": {
+		"name": "Servicio A - Gestión de Biblioteca",
+		"description": "API REST para la gestión de biblioteca - Servicio A\n\n## Endpoints disponibles:\n- **Libros**: CRUD completo (GET, POST, PUT, DELETE)\n- **Préstamos**: Registrar préstamos y devoluciones\n- **Usuarios**: CRUD de usuarios del sistema\n\n## Autenticación:\nTodos los endpoints requieren un JWT válido en el header `Authorization: Bearer <token>` o `x-token: <token>`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3005/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "Health Check",
+			"item": [
+				{
+					"name": "Verificar servicio",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/check",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Libros",
+			"item": [
+				{
+					"name": "Obtener todos los libros",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "{{baseUrl}}/books?title=&author=&category=&available=",
+							"host": ["{{baseUrl}}"],
+							"path": ["books"],
+							"query": [
+								{
+									"key": "title",
+									"value": "",
+									"description": "Filtrar por título (búsqueda parcial)"
+								},
+								{
+									"key": "author",
+									"value": "",
+									"description": "Filtrar por autor (búsqueda parcial)"
+								},
+								{
+									"key": "category",
+									"value": "",
+									"description": "Filtrar por categoría (búsqueda parcial)"
+								},
+								{
+									"key": "available",
+									"value": "",
+									"description": "Filtrar por disponibilidad (true/false)"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener libro por ID",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "{{baseUrl}}/books/:bookId",
+							"host": ["{{baseUrl}}"],
+							"path": ["books", ":bookId"],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "",
+									"description": "ID del libro"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "Crear libro",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/books",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Título del libro\",\n  \"author\": \"Autor del libro\",\n  \"category\": \"Categoría\",\n  \"year\": 2024\n}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar libro",
+					"request": {
+						"method": "PUT",
+						"url": {
+							"raw": "{{baseUrl}}/books/:bookId",
+							"host": ["{{baseUrl}}"],
+							"path": ["books", ":bookId"],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "",
+									"description": "ID del libro a actualizar"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Título actualizado\",\n  \"author\": \"Autor actualizado\",\n  \"category\": \"Categoría\",\n  \"year\": 2024,\n  \"available\": true\n}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar libro (lógico)",
+					"request": {
+						"method": "DELETE",
+						"url": {
+							"raw": "{{baseUrl}}/books/:bookId",
+							"host": ["{{baseUrl}}"],
+							"path": ["books", ":bookId"],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "",
+									"description": "ID del libro a eliminar"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Préstamos",
+			"item": [
+				{
+					"name": "Registrar préstamo",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/loans",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bookId\": \"id_del_libro\",\n  \"userId\": \"id_del_usuario\",\n  \"dueDate\": \"2026-08-01T00:00:00.000Z\"\n}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar devolución",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/loans/returns",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"loanId\": \"id_del_prestamo\"\n}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener préstamos por usuario",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "{{baseUrl}}/loans/user/:userId",
+							"host": ["{{baseUrl}}"],
+							"path": ["loans", "user", ":userId"],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "",
+									"description": "ID del usuario"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los préstamos",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "{{baseUrl}}/loans?status=",
+							"host": ["{{baseUrl}}"],
+							"path": ["loans"],
+							"query": [
+								{
+									"key": "status",
+									"value": "",
+									"description": "Filtrar por estado: active, returned, overdue"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Obtener todos los usuarios",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/users",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener usuario por ID",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId",
+							"host": ["{{baseUrl}}"],
+							"path": ["users", ":userId"],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "",
+									"description": "ID del usuario"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "Crear usuario",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/users",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"_id\": \"user_id_unico\",\n  \"name\": \"Nombre del usuario\",\n  \"email\": \"usuario@email.com\",\n  \"role\": \"USER_ROLE\"\n}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar usuario",
+					"request": {
+						"method": "PUT",
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId",
+							"host": ["{{baseUrl}}"],
+							"path": ["users", ":userId"],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "",
+									"description": "ID del usuario a actualizar"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Nombre actualizado\",\n  \"email\": \"email@actualizado.com\",\n  \"role\": \"USER_ROLE\"\n}"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar usuario (lógico)",
+					"request": {
+						"method": "DELETE",
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId",
+							"host": ["{{baseUrl}}"],
+							"path": ["users", ":userId"],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "",
+									"description": "ID del usuario a eliminar"
+								}
+							]
+						},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

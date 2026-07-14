@@ -1,0 +1,24 @@
+{
+  "name": "service-statistics",
+  "version": "1.0.0",
+  "description": "Servicio de Estadísticas y Recomendaciones del Sistema de Gestión de Biblioteca",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
