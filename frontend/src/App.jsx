@@ -1,16 +1,28 @@
-import Login from '../../Login';
-import Register from '../../Register';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Books from './pages/Books';
+import Loans from './pages/Loans';
+import Dashboard from './pages/Dashboard';
 
-function App() {
+export default function App() {
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px' }}>
-      <h1 style={{ textAlign: 'center' }}>📚 Sistema de Biblioteca - Frontend Inicial</h1>
-      <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
-        <Register />
-        <Login />
+    <Router>
+      <div style={{ backgroundColor: '#f8f9fa', minHeight: '100vh', margin: 0, fontFamily: 'Segoe UI, Roboto, sans-serif' }}>
+        <Routes>
+          {/* Redirección por defecto al Login */}
+          <Route path="/" element={<Navigate to="/login" />} />
+          
+          {/* Rutas Públicas */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          
+          {/* Rutas Privadas / Funcionales */}
+          <Route path="/books" element={<Books />} />
+          <Route path="/loans" element={<Loans />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
-
-export default App;
