@@ -1,0 +1,11 @@
+# Dependencias de Node
+node_modules/
+
+# Variables de entorno locales (¡Crucial por seguridad!)
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
