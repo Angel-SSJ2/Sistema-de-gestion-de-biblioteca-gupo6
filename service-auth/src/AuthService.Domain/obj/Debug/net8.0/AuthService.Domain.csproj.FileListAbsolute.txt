@@ -1,0 +1,12 @@
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/bin/Debug/net8.0/AuthService.Domain.deps.json
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/bin/Debug/net8.0/AuthService.Domain.dll
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/bin/Debug/net8.0/AuthService.Domain.pdb
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/AuthService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/AuthService.Domain.AssemblyInfoInputs.cache
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/AuthService.Domain.AssemblyInfo.cs
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/AuthService.Domain.csproj.CoreCompileInputs.cache
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/AuthService.Domain.sourcelink.json
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/AuthService.Domain.dll
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/refint/AuthService.Domain.dll
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/AuthService.Domain.pdb
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Domain/obj/Debug/net8.0/ref/AuthService.Domain.dll

@@ -1,0 +1,16 @@
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/bin/Debug/net8.0/AuthService.Persistence.deps.json
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/bin/Debug/net8.0/AuthService.Persistence.dll
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/bin/Debug/net8.0/AuthService.Persistence.pdb
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/bin/Debug/net8.0/AuthService.Domain.dll
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/bin/Debug/net8.0/AuthService.Domain.pdb
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthService.Persistence.csproj.AssemblyReference.cache
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthService.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthService.Persistence.AssemblyInfoInputs.cache
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthService.Persistence.AssemblyInfo.cs
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthService.Persistence.csproj.CoreCompileInputs.cache
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthService.Persistence.sourcelink.json
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthServ.5D1D95C4.Up2Date
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthService.Persistence.dll
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/refint/AuthService.Persistence.dll
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/AuthService.Persistence.pdb
+/home/angelssj1/Documentos/Sistema-de-gestion-de-biblioteca-gupo6/service-auth/src/AuthService.Persistence/obj/Debug/net8.0/ref/AuthService.Persistence.dll
